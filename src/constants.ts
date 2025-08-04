@@ -1,0 +1,1 @@
+export const initMessage = "Write some code in the code editor and click the button below to get a review.";

@@ -10,7 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@codemirror/lang-javascript": "^6.2.4",
+    "@langchain/core": "^0.3.66",
+    "@langchain/ollama": "^0.2.3",
     "@uiw/react-codemirror": "^4.24.2",
+    "@uiw/react-markdown-preview": "^5.1.5",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

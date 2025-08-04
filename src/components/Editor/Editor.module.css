@@ -1,0 +1,35 @@
+.editorWrapper {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.codeReviewButton {
+  width: max-content;
+  position: absolute;
+  bottom: 0.75rem; /* 3 * 0.25rem */
+  right: 0.75rem;
+  z-index: 50;
+  background-color: #22c55e;
+  padding: 0.5rem; /* 2 * 0.25rem */
+  border-radius: 0.25rem;
+  transition: background-color 0.2s, transform 0.1s;
+  border: none;
+  cursor: pointer;
+}
+
+.codeReviewButton:hover {
+  background-color: #15803d; /* Tailwind's green-700 */
+}
+
+.codeReviewButton:active {
+  transform: translateY(0.25rem); /* 1 * 0.25rem */
+}
+
+.codeReviewButton:disabled {
+  opacity: 0.75;
+  pointer-events: none;
+  cursor: not-allowed;
+}
