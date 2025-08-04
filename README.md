@@ -1,69 +1,79 @@
-# React + TypeScript + Vite
+# AI Code Review
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**AI Code Review** is a modern web application that uses artificial intelligence to review your code and provide instant, actionable feedback. Paste your code into the editor, hit "Review", and get suggestions, improvements, and best practices powered by AI—all in your browser!
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **Instant AI-Powered Code Reviews:** Get feedback on your code in seconds.
+- **Clean, Intuitive Interface:** Simple editor and output panel for easy use.
+- **Built with React & TypeScript:** Fast, modern, and easy to extend.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Node.js** (v16 or higher recommended)
+- **npm** or **yarn**
+- **Ollama** running locally with a compatible model (e.g., `deepseek-r1:1.5b`)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+> **Note:** Ollama is required to provide the AI backend for code review.  
+> [Get started with Ollama here.](https://ollama.com/)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚡ Getting Started
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Clone the repository:**
+   ```
+   git clone https://github.com/your-username/ai-code-review.git
+   cd ai-code-review
+   ```
+
+2. **Install dependencies:**
+   ```
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Start your Ollama model locally:**
+   ```
+   ollama run deepseek-r1:1.5b
+   ```
+   *(You can use any supported model, just make sure it's running.)*
+
+4. **Start the backend server (if applicable):**
+   ```
+   cd server
+   npm install
+   npm start
+   ```
+
+5. **Start the frontend:**
+   ```
+   npm run dev
+   ```
+   The app will be available at [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal).
+
+---
+
+## 💡 Future Improvements
+
+- **WebSocket Support:** Replace HTTP POST requests with WebSockets for real-time streaming of AI responses, improving user experience for longer reviews.
+- **Multi-language Support:** Expand code review capabilities to more programming languages.
+- **User Authentication:** Allow users to save and track their code reviews.
+- **Customizable AI Models:** Let users select or configure different AI models for review.
+
+---
+
+## 🤝 Contributing
+
+Pull requests and suggestions are welcome! Please open an issue to discuss your ideas or report bugs.
+
+---
+
+## 📄 License
+
+MIT
