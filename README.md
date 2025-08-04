@@ -57,6 +57,9 @@
    ```
    The app will be available at [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal).
 
+   <img width="1599" height="834" alt="Preview" src="https://github.com/user-attachments/assets/ffefb12c-0e56-4e85-b54e-855512b70d65" />
+
+
 ---
 
 ## 💡 Future Improvements
